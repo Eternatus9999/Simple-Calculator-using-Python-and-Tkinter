@@ -3,7 +3,7 @@ from tkinter import *
 root = Tk()
 
 root.title("Simple Calculator")
-root.geometry("200x300")
+root.geometry("265x300")
 
 text = ""
 
@@ -72,22 +72,22 @@ def button_point_click():
 
 def button_addition():
     global text
-    text += " + "
+    text += "+"
     textarea.config(text=text)
 
 def button_subtract():
     global text
-    text += " - "
+    text += "-"
     textarea.config(text=text)
 
 def button_multiply():
     global text
-    text += " * "
+    text += "*"
     textarea.config(text=text)
 
 def button_divide():
     global text
-    text += " / "
+    text += "/"
     textarea.config(text=text)
 
 def button_equal():
@@ -98,6 +98,11 @@ def button_equal():
 def button_clear():
     global text
     text = ""
+    textarea.config(text=text)
+
+def button_delete():
+    global text
+    text = text[:-1]
     textarea.config(text=text)
 
 def button_open_bracket():
@@ -130,6 +135,7 @@ btn_mul = Button(bottom, text="*", font=("Arial", 20), command=button_multiply)
 btn_div = Button(bottom, text="/", font=("Arial", 20), command=button_divide)
 btn_equ = Button(bottom, text="=", font=("Arial", 20), bg="green", command=button_equal)
 btn_clear = Button(bottom, text="C", font=("Arial", 20), bg="red", command=button_clear)
+btn_delete = Button(bottom, text="CE", font=("Arial", 20), command=button_delete)
 btn_open_bracket = Button(bottom, text="(", font=("Arial",20),command=button_open_bracket)
 btn_close_bracket = Button(bottom, text=")", font=("Arial",20),command=button_close_bracket)
 
@@ -147,7 +153,7 @@ btn4.grid(column=0, row=2)
 btn5.grid(column=1, row=2)
 btn6.grid(column=2, row=2)
 btn_sub.grid(column=3, row=2)
-btn_open_bracket.grid(column=4, row=2)
+btn_delete.grid(column=4, row=2)
 
 # row3
 
@@ -155,7 +161,7 @@ btn7.grid(column=0, row=3)
 btn8.grid(column=1, row=3)
 btn9.grid(column=2, row=3)
 btn_div.grid(column=3, row=3)
-btn_close_bracket.grid(column=4, row=3)
+btn_open_bracket.grid(column=4, row=3)
 
 # row4
 
@@ -163,6 +169,7 @@ btn0.grid(column=0, row=4)
 btn_point.grid(column=1, row=4)
 btn_mul.grid(column=2, row=4)
 btn_equ.grid(column=3, row=4)
+btn_close_bracket.grid(column=4, row=4)
 
 top.pack()
 bottom.pack()
