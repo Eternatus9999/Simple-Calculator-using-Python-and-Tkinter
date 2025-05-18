@@ -139,7 +139,7 @@ btn_mul = Button(bottom, text="*", font=("Arial", 20), command=button_multiply)
 btn_div = Button(bottom, text="/", font=("Arial", 20), command=button_divide)
 btn_equ = Button(bottom, text="=", font=("Arial", 20), bg="green", command=button_equal)
 btn_clear = Button(bottom, text="C", font=("Arial", 20), bg="red", command=button_clear)
-btn_delete = Button(bottom, text="CE", font=("Arial", 20), command=button_delete)
+btn_delete = Button(bottom, text="CE", font=("Arial", 16), command=button_delete)
 btn_open_bracket = Button(bottom, text="(", font=("Arial",20),command=button_open_bracket)
 btn_close_bracket = Button(bottom, text=")", font=("Arial",20),command=button_close_bracket)
 
