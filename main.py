@@ -3,7 +3,7 @@ from tkinter import *
 root = Tk()
 
 root.title("Simple Calculator")
-root.geometry("300x400")
+root.geometry("200x300")
 
 text = ""
 
@@ -13,6 +13,7 @@ bottom = Frame(root)
 textarea = Label(top, width=15, text=text, font=("Arial", 20), bg="lightgrey")
 textarea.pack()
 
+# Functions of the buttons
 def button_1_click():
     global text
     text += "1"
@@ -93,6 +94,23 @@ def button_equal():
     text = str(eval(text))
     textarea.config(text=text)
 
+def button_clear():
+    global text
+    text = ""
+    textarea.config(text=text)
+
+def button_open_bracket():
+    global text
+    text += "("
+    textarea.config(text=text)
+
+def button_close_bracket():
+    global text
+    text += ")"
+    textarea.config(text=text)
+
+
+# GUI Buttons
 
 btn1 = Button(bottom, text="1", font=("Arial", 20), command=button_1_click)
 btn2 = Button(bottom, text="2", font=("Arial", 20), command=button_2_click)
@@ -109,24 +127,37 @@ btn_add = Button(bottom, text="+", font=("Arial", 20), command=button_addition)
 btn_sub = Button(bottom, text="-", font=("Arial", 20), command=button_subtract)
 btn_mul = Button(bottom, text="*", font=("Arial", 20), command=button_multiply)
 btn_div = Button(bottom, text="/", font=("Arial", 20), command=button_divide)
-btn_equ = Button(bottom, text="=", font=("Arial", 20), command=button_equal)
+btn_equ = Button(bottom, text="=", font=("Arial", 20), bg="green", command=button_equal)
+btn_clear = Button(bottom, text="C", font=("Arial", 20), bg="red", command=button_clear)
+btn_open_bracket = Button(bottom, text="(", font=("Arial",20),command=button_open_bracket)
+btn_close_bracket = Button(bottom, text=")", font=("Arial",20),command=button_close_bracket)
 
+# row1
 btn1.grid(column=0, row=1)
 btn2.grid(column=1, row=1)
 btn3.grid(column=2, row=1)
+btn_add.grid(column=3, row=1)
+btn_clear.grid(column=4, row=1)
+
+# row2
 btn4.grid(column=0, row=2)
 btn5.grid(column=1, row=2)
 btn6.grid(column=2, row=2)
+btn_sub.grid(column=3, row=2)
+btn_open_bracket.grid(column=4, row=2)
+
+# row3
 btn7.grid(column=0, row=3)
 btn8.grid(column=1, row=3)
 btn9.grid(column=2, row=3)
+btn_div.grid(column=3, row=3)
+btn_close_bracket.grid(column=4, row=3)
+
+# row4
 btn0.grid(column=0, row=4)
 btn_point.grid(column=1, row=4)
-btn_add.grid(column=3, row=1)
-btn_sub.grid(column=3, row=2)
-btn_mul.grid(column=3, row=3)
-btn_div.grid(column=3, row=4)
-btn_equ.grid(column=2, row=4)
+btn_mul.grid(column=2, row=4)
+btn_equ.grid(column=3, row=4)
 
 top.pack()
 bottom.pack()
