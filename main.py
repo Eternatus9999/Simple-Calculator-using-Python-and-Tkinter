@@ -14,6 +14,7 @@ textarea = Label(top, width=15, text=text, font=("Arial", 20), bg="lightgrey")
 textarea.pack()
 
 # Functions of the buttons
+
 def button_1_click():
     global text
     text += "1"
@@ -133,6 +134,7 @@ btn_open_bracket = Button(bottom, text="(", font=("Arial",20),command=button_ope
 btn_close_bracket = Button(bottom, text=")", font=("Arial",20),command=button_close_bracket)
 
 # row1
+
 btn1.grid(column=0, row=1)
 btn2.grid(column=1, row=1)
 btn3.grid(column=2, row=1)
@@ -140,6 +142,7 @@ btn_add.grid(column=3, row=1)
 btn_clear.grid(column=4, row=1)
 
 # row2
+
 btn4.grid(column=0, row=2)
 btn5.grid(column=1, row=2)
 btn6.grid(column=2, row=2)
@@ -147,6 +150,7 @@ btn_sub.grid(column=3, row=2)
 btn_open_bracket.grid(column=4, row=2)
 
 # row3
+
 btn7.grid(column=0, row=3)
 btn8.grid(column=1, row=3)
 btn9.grid(column=2, row=3)
@@ -154,6 +158,7 @@ btn_div.grid(column=3, row=3)
 btn_close_bracket.grid(column=4, row=3)
 
 # row4
+
 btn0.grid(column=0, row=4)
 btn_point.grid(column=1, row=4)
 btn_mul.grid(column=2, row=4)
