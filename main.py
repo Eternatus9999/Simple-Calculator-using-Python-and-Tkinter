@@ -5,12 +5,16 @@ root = Tk()
 root.title("Simple Calculator")
 root.geometry("265x300")
 
+root.configure(bg="lightgrey")
+
 text = ""
 
 top = Frame(root)
 bottom = Frame(root)
 
-textarea = Label(top, width=15, text=text, font=("Arial", 20), bg="lightgrey")
+bottom.configure(bg="lightgrey")
+
+textarea = Label(top, width=15, text=text, font=("Arial", 20))
 textarea.pack()
 
 # Functions of the buttons
