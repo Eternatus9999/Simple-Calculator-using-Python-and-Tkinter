@@ -122,7 +122,7 @@ def button_close_bracket():
 
 # GUI Buttons
 
-btn1 = Button(bottom, text="1", font=("Arial", 20), command=button_1_click)
+btn1 = Button(bottom, text="1", font=("Arial", 20), command=button_1_click,)
 btn2 = Button(bottom, text="2", font=("Arial", 20), command=button_2_click)
 btn3 = Button(bottom, text="3", font=("Arial", 20), command=button_3_click)    
 btn4 = Button(bottom, text="4", font=("Arial", 20), command=button_4_click)
@@ -142,6 +142,8 @@ btn_clear = Button(bottom, text="C", font=("Arial", 20), bg="red", command=butto
 btn_delete = Button(bottom, text="CE", font=("Arial", 20), command=button_delete)
 btn_open_bracket = Button(bottom, text="(", font=("Arial",20),command=button_open_bracket)
 btn_close_bracket = Button(bottom, text=")", font=("Arial",20),command=button_close_bracket)
+
+# Button Layout
 
 # row1
 
