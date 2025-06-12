@@ -3,9 +3,11 @@ from tkinter import *
 root = Tk()
 
 root.title("Simple Calculator")
-root.geometry("265x300")
+root.geometry("265x300+800+300")
 
 root.configure(bg="lightgrey")
+
+root.resizable(False, False)
 
 text = ""
 
